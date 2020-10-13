@@ -4,11 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VueJs</title>
-  <!--Link to Boostrap-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <!--Link to css custome file-->
   <link rel="stylesheet" href="sample.css">
-  <!--Js cdn link-->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
@@ -27,7 +24,6 @@
         <p class="lead">Please enter the information</p>
       </div>
 
-      <!-- Synchronizes the date set in Vue.js with the HTML input element by setting v-model="name". -->
       <form class="form-inline col-12 offset-2">
         <div class="form-group mx-sm-3 mb-2">
           <label for="inputName2" class="sr-only">Name</label>
@@ -45,20 +41,16 @@
             <button v-on:click="addStudent" type="submit" class="btn btn-primary mb-2 offset-5">Add Student</button>
         <hr>
       </main>
-     <!-- button v-on:click="addStudent" to select a method to be launched when the button is clicked -->
      <table class="table">
       <thead class="thead-dark">
         <tr>
-          <!-- v-for="student in students", where the array students are cut out one by one and assigned to the variable students. -->
-         <!-- v-bind:key="student.id" is used to ensure uniqueness of each extracted element -->
-          <th>ID</th>
-          <th>Name</th>
-          <th>Course</th>
-          <th>Course Period</th>
+          <th>id</th>
+          <th>name</th>
+          <th>course</th>
+          <th>course Period</th>
         </tr>
       </thead>
       <tbody>
-         <!-- You can expand Vue.js data into expressions by writing in {{ }} -->
         <tr v-for="student in students" v-bind:key="student.id">
           <td>{{student.id}}</td>
           <td>{{student.name}}</td>
@@ -68,7 +60,6 @@
       </tbody>
     </table>
   </div>
-
   <script src="sample.js"></script>
 </body>
 </html>
